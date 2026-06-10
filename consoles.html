@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эволюция консолей — Спецификации</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Дополнительные точечные стили для картинок, чтобы не ломать основной style.css */
+        .console-hardware-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        .console-img-wrap {
+            width: 100%;
+            height: 200px;
+            background-color: #090a0f;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .console-img-wrap img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.8));
+            transition: transform 0.4s ease;
+        }
+
+        /* Эффект легкого приближения картинки при наведении */
+        .console-card:hover .console-img-wrap img {
+            transform: scale(1.05);
+        }
+
+        @media (min-width: 550px) {
+            .console-hardware-layout {
+                grid-template-columns: 220px 1fr;
+            }
+            .console-img-wrap {
+                height: 100%;
+                min-height: 220px;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Цифровой Архив Видеоигр</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="consoles.html" class="active">Эволюция консолей</a>
+            <a href="games.html">Культовые игры</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Архитектура платформ и эволюция железа</h2>
+        <p>Сравните технические спецификации и внешний вид устройств, изменивших представление человечества о возможностях кремниевых процессоров.</p>
+
+        <div class="hardware-grid">
+            
+            <!-- Консоль 1: Magnavox -->
+            <div class="console-card">
+                <div class="console-hardware-layout">
+                    <div class="console-img-wrap">
+                        <!-- Реальное фото Magnavox Odyssey -->
+                        <img src="5.jpg" alt="Magnavox Odyssey">
+                    </div>
+                    <div class="spec-box">
+                        <span class="generation-tag" style="background:#718096">1 Поколение</span>
+                        <div class="spec-title">Magnavox Odyssey</div>
+                        <ul class="tech-list">
+                            <li><strong>Процессор:</strong> Отсутствует (аналоговая логика)</li>
+                            <li><strong>ОЗУ:</strong> Нет памяти</li>
+                            <li><strong>Носитель:</strong> Карты переключения схем</li>
+                            <li><strong>Продажи:</strong> ~350,000 штук</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3>Первопроходец домашних систем (1972)</h3>
+                    <p>Абсолютно аналоговая система, созданная Ральфом Бером. Она не умела генерировать цветную картинку и даже считать очки счета — игроки записывали результаты на бумаге. Поставлялась с пластиковыми накладками на экран телевизора, которые заменяли собой игровую графику (поля, сетки, карты).</p>
+                    <label>Относительная вычислительная мощность:</label>
+                    <div class="power-bar-container"><div class="power-bar" style="width: 0.5%"></div></div>
+                </div>
+            </div>
+
+            <!-- Консоль 2: Atari -->
+            <div class="console-card">
+                <div class="console-hardware-layout">
+                    <div class="console-img-wrap">
+                        <!-- Реальное фото копуса Atari 2600 под дерево -->
+                        <img src="4.jpg" alt="Atari 2600">
+                    </div>
+                    <div class="spec-box">
+                        <span class="generation-tag" style="background:#4a5568">2 Поколение</span>
+                        <div class="spec-title">Atari 2600</div>
+                        <ul class="tech-list">
+                            <li><strong>Процессор:</strong> MOS 6507 (1.19 МГц)</li>
+                            <li><strong>ОЗУ:</strong> 128 байт</li>
+                            <li><strong>Графика:</strong> Чип TIA (128 цветов)</li>
+                            <li><strong>Продажи:</strong> 30 миллионов штук</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3>Революция сменных картриджей (1977)</h3>
+                    <p>Легенда, которая популяризировала концепцию продажи отдельных игр. До неё консоли имели лишь жестко прошитые с завода игры. Из-за отсутствия защиты патентов любой желающий мог писать игры под Atari, что в итоге привело к огромному кризису и затовариванию рынка низкокачественным софтом.</p>
+                    <label>Относительная вычислительная мощность:</label>
+                    <div class="power-bar-container"><div class="power-bar" style="width: 2%"></div></div>
+                </div>
+            </div>
+
+            <!-- Консоль 3: NES -->
+            <div class="console-card">
+                <div class="console-hardware-layout">
+                    <div class="console-img-wrap">
+                        <!-- Фото классической японской Famicom / NES -->
+                        <img src="3.jpg" alt="NES / Famicom">
+                    </div>
+                    <div class="spec-box">
+                        <span class="generation-tag" style="background:#e53e3e">3 Поколение</span>
+                        <div class="spec-title">NES / Famicom</div>
+                        <ul class="tech-list">
+                            <li><strong>Процессор:</strong> Ricoh 2A03 (1.79 МГц)</li>
+                            <li><strong>ОЗУ:</strong> 2 КБ основного + 2 КБ видео</li>
+                            <li><strong>Звук:</strong> Пятиполосный моно</li>
+                            <li><strong>В РФ известна как:</strong> «Денди» (Dendy)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3>Спаситель мировой индустрии (1983)</h3>
+                    <p>8-битная система, которая вытащила индустрию из затяжной депрессии. Nintendo ввела жесткое лицензирование: одна студия могла выпускать не более 5 игр в год, а в консоль встраивался секретный чип проверки подлинности 10NES. Именно здесь зародились франшизы Super Mario, Zelda и Metroid.</p>
+                    <label>Относительная вычислительная мощность:</label>
+                    <div class="power-bar-container"><div class="power-bar" style="width: 8%"></div></div>
+                </div>
+            </div>
+
+            <!-- Консоль 4: Sega -->
+            <div class="console-card">
+                <div class="console-hardware-layout">
+                    <div class="console-img-wrap">
+                        <!-- Фото Sega Mega Drive / Genesis -->
+                        <img src="2.jpg" alt="Sega Mega Drive">
+                    </div>
+                    <div class="spec-box">
+                        <span class="generation-tag" style="background:#2b6cb0">4 Поколение</span>
+                        <div class="spec-title">Sega Mega Drive</div>
+                        <ul class="tech-list">
+                            <li><strong>Процессор:</strong> Motorola 68000 (7.67 МГц)</li>
+                            <li><strong>ОЗУ:</strong> 64 КБ + 64 КБ видео</li>
+                            <li><strong>Звук:</strong> FM-чип Yamaha</li>
+                            <li><strong>Главный символ:</strong> Еж Соник</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3>Подростковый бунт и 16-битные войны (1988)</h3>
+                    <p>Sega бросила вызов детскому имиджу Nintendo. Рекламная кампания "Sega does what Nintendon't" и невероятно быстрый процессор Motorola обрабатывали спортивные симуляторы и динамичные аркады быстрее конкурентов. Звуковой чип Yamaha выдавал жесткие, роковые и электронные саундтреки.</p>
+                    <label>Относительная вычислительная мощность:</label>
+                    <div class="power-bar-container"><div class="power-bar" style="width: 25%"></div></div>
+                </div>
+            </div>
+
+            <!-- Консоль 5: Game Boy -->
+            <div class="console-card">
+                <div class="console-hardware-layout">
+                    <div class="console-img-wrap">
+                        <!-- Фото классического серого Game Boy DMG-01 -->
+                        <img src="1.jpg" alt="Nintendo Game Boy">
+                    </div>
+                    <div class="spec-box">
+                        <span class="generation-tag" style="background:#319795">Портативные</span>
+                        <div class="spec-title">Game Boy</div>
+                        <ul class="tech-list">
+                            <li><strong>Процессор:</strong> Sharp LR35902 (4.19 МГц)</li>
+                            <li><strong>Экран:</strong> Монохромный (4 оттенка)</li>
+                            <li><strong>Питание:</strong> 4 батарейки АА (до 30 ч)</li>
